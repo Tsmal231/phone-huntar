@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone-hunting-Api</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.2/dist/full.css" rel="stylesheet" type="text/css" />
+     <script src="https://cdn.tailwindcss.com"></script> 
+    
+</head>
+<body>
+    <header>
+        <section class="container mx-auto">
+            <div class="flex justify-around">
+                <h3 class="text-base font-bold  ">Hot Gadgets</h3>
+                <button class="btn btn-active btn-primary">Sign Up</button>
+            </div>
+            <div class="text-center">
+                <h1 class=" text-4xl font-bold mt-5 mb-5">Apple Iphone 13 Pro Max</h1>
+                <p class="text-sm font-normal mb-5">There are many variations of passages of Lorem Ipsum available, but the majority <br> have suffered alteration in some form, by injected humou.</p>
+                <button class="btn btn-active btn-primary ">Buy Now</button>
+            </div>
+
+        </section>
+
+    </header>
+    <section class="container mx-auto ">
+        <div class="bg-gray-100 mx-auto p-4 text-center ">
+            <input id="input-field" type="text" placeholder="Type here" class="input input-bordered input-primary w-full max-w-xs" />
+            <button onclick="handleSearch()"class="btn btn-accent">search</button>
+        </div>
+    </section>
+    <main class="container mx-auto m-8">
+    <!-- loading spiner -->
+    <section >
+      <div id="loading-spinner" class="text-center my-40 hidden">
+        <span class="loading loading-spinner loading-md"></span>
+      </div>
+    </section>
+    <!-- search container -->
+     <section>
+        <div id="phone-container" class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            
+        </div>
+        <!-- showall btn -->
+        <section id="show-all-btn" class=" text-center hidden">
+            <div >
+                <button onclick="handleShowAll()" class="btn btn-accent">Show all</button>
+            </div>
+        </section>
+     </section>
+     <!-- modal -->
+     <section>
+     <!-- Open the modal using ID.showModal() method -->
+
+<dialog id="details_modal" class="modal modal-bottom sm:modal-middle">
+  <form method="dialog" class="modal-box">
+     <div id="modal-phone-details">
+
+     </div>
+    <p class="py-4">Press ESC key or click the button below to close</p>
+    <div class="modal-action">
+      <!-- if there is a button in form, it will close the modal -->
+      <button class="btn">Close</button>
+    </div>
+  </form>
+</dialog>
+     </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/index.js"></script>
+</body>
+</html>
